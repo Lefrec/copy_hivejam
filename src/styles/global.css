@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+    /* Fonts */
+    --font-title: "Montserrat", sans-serif;
+    --font-text: "Roboto", sans-serif;
+
+
+    /* Color */
+    /* Brand */
+    --color-brand-1: #f29f05;
+    --color-brand-2: #f2b905;
+    --color-brand-3: #f2cb05;
+    /* Secondary */
+    --color-secondary-1: #81c6e9;
+    --color-secondary-2: #75e9ce;
+    /* Negative */
+    --color-negative: #af2d2d;
+    /* Grayscale */
+    --color-black: #1e1e1e;
+    --color-white: #fff;
+    --color-dark-gray: #464646;
+    --color-light-gray: #f4f4f4;
+}
+
+@layer base {
+    h1 {
+        @apply font-title text-5xl font-bold
+    }
+
+    h2 {
+        @apply font-title text-3xl font-medium uppercase
+    }
+
+    h3 {
+        @apply font-title text-2xl font-semibold
+    }
+
+    h4 {
+        @apply font-title text-lg font-medium
+    }
+
+    body {
+        @apply font-text text-base font-medium text-black
+    }
+
+    img {
+        @apply object-cover rounded-md
+    }
+}
+
+@layer components {
+    .btn-light {
+        @apply flex items-center justify-center border-2 text-brand-1 uppercase text-base font-medium px-5 py-1 rounded-2xl gap-2.5
+    }
+
+    .btn-full {
+        @apply flex items-center justify-center text-white bg-brand-1 uppercase text-base font-medium px-5 py-1 rounded-2xl gap-2.5
+    }
+
+    .tiny {
+        @apply font-text text-sm font-light
+    }
+
+    .hexagon {
+        -webkit-mask-image: url(../assets/svg/Hexagon.svg);
+        mask-image: url(../assets/svg/Hexagon.svg);
+        @apply  h-12 w-10.5
+    }
+}
